@@ -17,7 +17,6 @@ nav {
     padding: 1% 3%;
     justify-content: space-between;
     align-items: center;
-    padding-right: 15%;
 }
 
 nav img {
@@ -55,6 +54,7 @@ nav img {
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
+    text-align: center;
 }
 
 .domov h1 {
@@ -76,10 +76,6 @@ nav img {
     text-decoration: none;
 }
 
-.tlacidloSteam:hover{
-    background-color: crimson;
-}
-
 /*CSS prebrate z oficialnej stranky rochu som ho ale upravil aby sedelo na moju stranku*/
 .homepage_PlayButton_2yA33 {
     min-width: 350px;
@@ -97,6 +93,14 @@ nav img {
     transition-duration: .1s;
 }
 
+.homepage_PlayButton_2yA33:hover{
+    min-width: 350px;
+    height: 100px;
+    background-color: dimgray;
+    transition: 1s;
+}
+
+/*CSS prebrate z oficialnej stranky rochu som ho ale upravil aby sedelo na moju stranku*/
 .homepage_PlayButton_2yA33 .homepage_SteamLogo_2OrkR {
     width: 70px;
     height: 70px;
@@ -104,17 +108,17 @@ nav img {
     background-size: contain;
     background-repeat: no-repeat;
 }
-
+/*CSS prebrate z oficialnej stranky rochu som ho ale upravil aby sedelo na moju stranku*/
 .homepage_PlayButton_2yA33 .homepage_RightSide_1oC4f {
-    flex-grow: 1;
-    min-height: 0;
+    flex-grow: 10;
+    min-height: 25;
     display: flex;
     flex-direction: column;
     margin-right: 12px;
 }
-
+/*CSS prebrate z oficialnej stranky rochu som ho ale upravil aby sedelo na moju stranku*/
 .homepage_PlayButton_2yA33 .homepage_RightSide_1oC4f .homepage_PlayForFree_QtAu0 {
-    font-size: 38px;
+    font-size: 35px;
     text-transform: uppercase;
     letter-spacing: 2px;
     color: #fff;
@@ -122,13 +126,21 @@ nav img {
     font-family: Reaver, serif;
     font-weight: 600;
 }
-
+/*CSS prebrate z oficialnej stranky rochu som ho ale upravil aby sedelo na moju stranku*/
 .homepage_PlayButton_2yA33 .homepage_RightSide_1oC4f .homepage_Download_T3dgN {
-    font-size: 22px;
+    font-size: 25px;
     color: darkgray;
     text-transform: uppercase;
     letter-spacing: 2px;
     text-shadow: 2px 2px 3px #000;
     text-align: center;
+}
 
+@media(max-width: 900px) {
+    .domov h1 {
+        font-size: 40px;
+    }
+    .menu ul li a {
+        font-size: 15px;
+    }
 }
