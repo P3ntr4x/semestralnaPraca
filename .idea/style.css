@@ -35,17 +35,18 @@ nav img {
     position: relative;
 }
 
+.menu ul li:hover {
+    background-color: dimgray;
+    transition: 1s;
+}
+
 .menu ul li a {
-    color: white;
+    color: whitesmoke;
     text-decoration: none;
     font-size: 35px;
     font-family: "Trebuchet MS";
 }
 
-.menu ul li:hover {
-    background-color: indianred;
-    transition: 1s;
-}
 
 .domov {
     width: 60%;
@@ -93,7 +94,7 @@ nav img {
     transition-duration: .1s;
 }
 
-.homepage_PlayButton_2yA33:hover{
+.homepage_PlayButton_2yA33:hover {
     min-width: 350px;
     height: 100px;
     background-color: dimgray;
@@ -108,17 +109,19 @@ nav img {
     background-size: contain;
     background-repeat: no-repeat;
 }
+
 /*CSS prebrate z oficialnej stranky rochu som ho ale upravil aby sedelo na moju stranku*/
 .homepage_PlayButton_2yA33 .homepage_RightSide_1oC4f {
     flex-grow: 10;
-    min-height: 25;
+    min-height: 0;
     display: flex;
     flex-direction: column;
     margin-right: 12px;
 }
+
 /*CSS prebrate z oficialnej stranky rochu som ho ale upravil aby sedelo na moju stranku*/
 .homepage_PlayButton_2yA33 .homepage_RightSide_1oC4f .homepage_PlayForFree_QtAu0 {
-    font-size: 35px;
+    font-size: 22px;
     text-transform: uppercase;
     letter-spacing: 2px;
     color: #fff;
@@ -126,20 +129,185 @@ nav img {
     font-family: Reaver, serif;
     font-weight: 600;
 }
+
 /*CSS prebrate z oficialnej stranky rochu som ho ale upravil aby sedelo na moju stranku*/
 .homepage_PlayButton_2yA33 .homepage_RightSide_1oC4f .homepage_Download_T3dgN {
-    font-size: 25px;
+    font-size: 15px;
     color: darkgray;
     text-transform: uppercase;
     letter-spacing: 2px;
     text-shadow: 2px 2px 3px #000;
+}
+
+/* novinky*/
+.novinky {
+    width: 40%;
+    color: white;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: left;
+}
+
+.novinky h1 {
+    font-size: 80px;
+}
+
+.novinky p {
+    margin: 35px 0 40px;
+}
+
+/*hrdinovia*/
+
+.vsetciHrdinovia {
+    width: 250px;
+    margin: auto;
+    text-align: center;
+    padding-top: 125px;
+}
+
+.hrdinaAntiMage {
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hrdinaAntiMage img {
+    width: 250px;
+}
+
+.hrdinaAntiMage:hover {
+    transform: scale(1.5);
+}
+
+.hrdinaAntiMage:target {
+    background-color: crimson;
+}
+
+.hrdinaCrystal {
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hrdinaCrystal img {
+    width: 250px;
+}
+
+.hrdinaCrystal:hover {
+    transform: scale(1.5);
+}
+
+.hrdinaFurion {
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hrdinaFurion img {
+    width: 250px;
+}
+
+.hrdinaFurion:hover {
+    transform: scale(1.5);
+}
+
+.hrdinaJuggernout {
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+}
+
+.hrdinaJuggernout img {
+    width: 250px;
+}
+
+.hrdinaJuggernout:hover {
+    transform: scale(1.5);
+}
+
+/* turnaje */
+
+.turnaje {
+    width: 60%;
+    color: white;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     text-align: center;
 }
 
-@media(max-width: 900px) {
+.turnaje h1 {
+    font-size: 80px;
+}
+
+/* rebricek */
+
+.rebricek {
+    width: 60%;
+    color: white;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.rebricek h1 {
+    font-size: 80px;
+}
+
+/* diskusne forum */
+
+.forum {
+    width: 60%;
+    color: white;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.forum h1 {
+    font-size: 80px;
+}
+
+/* responzivny dizajn */
+
+@media (max-width: 992px) {
     .domov h1 {
         font-size: 40px;
     }
+
+    .menu ul li {
+        padding: 8px 40px;
+    }
+
+    .menu ul li a {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .domov h1 {
+        font-size: 30px;
+    }
+
+    .menu ul li {
+        padding: 4px 25px;
+    }
+
     .menu ul li a {
         font-size: 15px;
     }
