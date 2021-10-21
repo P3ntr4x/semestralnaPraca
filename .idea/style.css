@@ -143,6 +143,12 @@ nav img {
     text-shadow: 2px 2px 3px #000;
 }
 
+
+
+
+
+
+
 /* novinky*/
 .novinky {
     width: 40%;
@@ -161,6 +167,14 @@ nav img {
 .novinky p {
     margin: 35px 0 40px;
 }
+
+
+
+
+
+
+
+
 
 /*hrdinovia*/
 
@@ -266,6 +280,12 @@ nav img {
 }
 
 
+
+
+
+
+
+
 /* turnaje */
 
 .turnaje {
@@ -281,6 +301,13 @@ nav img {
 .turnaje h1 {
     font-size: 80px;
 }
+
+
+
+
+
+
+
 
 /* rebricek */
 
@@ -329,6 +356,10 @@ nav img {
     color: black;
 }
 
+
+
+
+
 /* diskusne forum */
 
 .forum {
@@ -344,6 +375,11 @@ nav img {
 .forum h1 {
     font-size: 80px;
 }
+
+
+
+
+
 
 /* responzivny dizajn */
 
