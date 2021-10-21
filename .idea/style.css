@@ -33,11 +33,15 @@ nav img {
     display: inline-block;
     padding: 8px 60px;
     position: relative;
+    transition: 0.5s;
+    border-radius: 10px;
+
 }
 
 .menu ul li:hover {
     background-color: dimgray;
     transition: 1s;
+    border-radius: 10px;
 }
 
 .menu ul li a {
@@ -160,7 +164,7 @@ nav img {
 
 /*hrdinovia*/
 
-.vsetciHrdinovia {
+.vsetciHrdinovia1 {
     width: 250px;
     margin: auto;
     text-align: center;
@@ -173,6 +177,7 @@ nav img {
     margin-bottom: 30px;
     position: relative;
     overflow: hidden;
+    transition: 0.5s;
 }
 
 .hrdinaAntiMage img {
@@ -181,6 +186,7 @@ nav img {
 
 .hrdinaAntiMage:hover {
     transform: scale(1.5);
+    transition: 1s;
 }
 
 .hrdinaAntiMage:target {
@@ -193,6 +199,7 @@ nav img {
     margin-bottom: 30px;
     position: relative;
     overflow: hidden;
+    transition: 0.5s;
 }
 
 .hrdinaCrystal img {
@@ -201,6 +208,7 @@ nav img {
 
 .hrdinaCrystal:hover {
     transform: scale(1.5);
+    transition: 1s;
 }
 
 .hrdinaFurion {
@@ -209,6 +217,7 @@ nav img {
     margin-bottom: 30px;
     position: relative;
     overflow: hidden;
+    transition: 0.5s;
 }
 
 .hrdinaFurion img {
@@ -217,6 +226,7 @@ nav img {
 
 .hrdinaFurion:hover {
     transform: scale(1.5);
+    transition: 1s;
 }
 
 .hrdinaJuggernout {
@@ -225,6 +235,7 @@ nav img {
     margin-bottom: 30px;
     position: relative;
     overflow: hidden;
+    transition: 0.5s;
 }
 
 .hrdinaJuggernout img {
@@ -233,7 +244,27 @@ nav img {
 
 .hrdinaJuggernout:hover {
     transform: scale(1.5);
+    transition: 1s;
 }
+
+.hrdinaMonkeyKing {
+    flex-basis: 32%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    position: relative;
+    overflow: hidden;
+    transition: 0.5s;
+}
+
+.hrdinaMonkeyKing img {
+    width: 250px;
+}
+
+.hrdinaMonkeyKing:hover {
+    transform: scale(1.5);
+    transition: 1s;
+}
+
 
 /* turnaje */
 
@@ -255,16 +286,47 @@ nav img {
 
 .rebricek {
     width: 60%;
-    color: white;
+    color: indianred;
     position: absolute;
-    top: 40%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
 }
 
-.rebricek h1 {
+.rebricek h2 {
     font-size: 80px;
+    font-family: "Trebuchet MS";
+}
+
+.rebricek table {
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+    color: whitesmoke;
+    text-align: center;
+    font-family: "Trebuchet MS";
+}
+
+.rebricek table th{
+    background-color: transparent;
+    padding: 50px 30px 4px 80px;
+    font-size: 20px;
+}
+
+.rebricek table td{
+    border: 1px solid whitesmoke;
+    padding: 4px 8px;
+}
+
+.rebricek table tr:nth-child(odd) td {
+    background-color: dimgray;
+    color: whitesmoke;
+}
+
+.rebricek table tr:nth-child(even) td {
+    background-color: darkgray;
+    color: black;
 }
 
 /* diskusne forum */
@@ -297,6 +359,9 @@ nav img {
     .menu ul li a {
         font-size: 20px;
     }
+    .rebricek h2 {
+        font-size: 40px;
+    }
 }
 
 @media (max-width: 576px) {
@@ -310,5 +375,9 @@ nav img {
 
     .menu ul li a {
         font-size: 15px;
+    }
+
+    .rebricek h2 {
+        font-size: 25px;
     }
 }
