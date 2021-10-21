@@ -398,6 +398,25 @@ nav img {
     .rebricek h2 {
         font-size: 40px;
     }
+
+    .rebricek table td{
+        display: none;
+    }
+
+    .rebricek table th{
+        display: none;
+    }
+
+    .rebricek table td:nth-child(3){
+        display: block;
+        font-size: 15px;
+    }
+
+    .rebricek table th:nth-child(3){
+        display: block;
+        font-size: 20px;
+    }
+
 }
 
 @media (max-width: 576px) {
@@ -415,5 +434,19 @@ nav img {
 
     .rebricek h2 {
         font-size: 25px;
+    }
+
+    .rebricek table td{
+        display: none;
+    }
+
+    .rebricek table th:nth-child(3){
+        display: block;
+        font-size: 15px;
+    }
+
+    .rebricek table td:nth-child(3){
+        display: block;
+        font-size: 10px;
     }
 }
