@@ -1,3 +1,9 @@
+<?php
+ require "App.php";
+
+ $app = new App();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,9 +31,29 @@
         </div>
         <i class="fa fa-bars" onclick="zobrazMenu()"></i>
     </nav>
-    <div class="turnaje">
-        <h1>Na stranke sa pracuje</h1>
+    <div class="forum">
+        <h1>Pridajte prispevok na forum</h1>
+<form class="forumPridaj" method="post">
+    <label for="nazov">Nazov: </label>
+    <input type="text" name="nazov" id="nazov"><br>
+    <label for="text">Text: </label>
+    <textarea name="text" id="text"></textarea>
+    <input type="submit" name="poslat" value="Odoslat">
+</form>
     </div>
+    <div class="prispevky">
+<?php
+    /** @var Blog $blog */
+foreach ($app->getAllData() as $blog)
+ {
+     echo "<h2>" . $blog->getNazov() . "</h2>";
+     echo "<small>" . $blog->getDatum() . "</small>";
+     echo "<p>" . $blog->getText() . "</p>";
+     echo "<hr>";
+ }
+?>
+</div>
+
 </section>
 <script>
 

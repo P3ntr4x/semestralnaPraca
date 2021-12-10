@@ -6,21 +6,24 @@
     <link rel="icon" type="image/x-icon" href="ikona.ico"/>
     <title> Hraj << DotA2 </title>
     <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
 <section class="hlavicka">
     <nav>
-        <a href="domov.html"><img src="logo.png" alt="Logo mojej stranky"></a>
-        <div class="menu">
+        <a href="Sem/index.html"><img src="logo.png" alt="Logo mojej stranky"></a>
+        <div class="menu" id="menuB">
+            <i class="fa fa-times" onclick="skryMenu()"></i>
             <ul>
-                <li><a href="domov.html"> Domov</a></li>
+                <li><a href="index.html"> Domov</a></li>
                 <li><a href="novinky.html"> Novinky</a></li>
                 <li><a href="turnaje.html"> Turnaje</a></li>
                 <li><a href="hrdinovia.html"> Hrdinovia</a></li>
                 <li><a href="rebricek.html"> Rebríček</a></li>
-                <li><a href="diskusneForum.html"> Diskusné Fórum</a></li>
+                <li><a href="forum.php"> Diskusné Fórum</a></li>
             </ul>
         </div>
+        <i class="fa fa-bars" onclick="zobrazMenu()"></i>
     </nav>
     <div class="vsetciHrdinovia1">
         <div class="hrdinaAntiMage">
@@ -45,5 +48,20 @@
         </div>
     </div>
 </section>
+<script>
+
+    var menuB = document.getElementById("menuB");
+
+    function zobrazMenu()
+    {
+        menuB.style.right = "0";
+    }
+
+    function skryMenu()
+    {
+        menuB.style.right = "-200px";
+    }
+
+</script>
 </body>
 </html>
