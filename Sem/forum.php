@@ -1,9 +1,3 @@
-<?php
- require "App.php";
-
- $app = new App();
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,6 +9,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
+include('proces.php');
 <section class="hlavicka">
     <nav>
         <a href="Sem/index.html"><img src="logo.png" alt="Logo mojej stranky"></a>
@@ -31,29 +26,68 @@
         </div>
         <i class="fa fa-bars" onclick="zobrazMenu()"></i>
     </nav>
-    <div class="forum">
-        <h1>Pridajte prispevok na forum</h1>
-<form class="forumPridaj" method="post">
-    <label for="nazov">Nazov: </label>
-    <input type="text" name="nazov" id="nazov"><br>
-    <label for="text">Text: </label>
-    <textarea name="text" id="text"></textarea>
-    <input type="submit" name="poslat" value="Odoslat">
-</form>
-    </div>
-    <div class="prispevky">
-<?php
-    /** @var Blog $blog */
-foreach ($app->getAllData() as $blog)
- {
-     echo "<h2>" . $blog->getNazov() . "</h2>";
-     echo "<small>" . $blog->getDatum() . "</small>";
-     echo "<p>" . $blog->getText() . "</p>";
-     echo "<hr>";
- }
-?>
-</div>
 
+    <?php require_once('proces.php')?>
+    <?php
+        $mysqli = new mysqli('localhost', 'root', 'dtb456', 'db1' ) or die(mysqli_error($mysqli));
+        $result = $mysqli->query("SELECT * from data") or die($mysqli->error);
+        ?>
+
+         <div class="forum">
+             <table>
+                 <thead>
+                 <tr>
+                     <th>Nazov</th>
+                     <th>Text</th>
+                     <th colspan="2">Akcia</th>
+                 </tr>
+                 </thead>
+                 <?php
+                    while ($poleNazovText = $result->fetch_assoc()):
+                 ?>
+                    <tr>
+                        <td>
+                            <?php echo $poleNazovText['nazov']; ?>
+                        </td>
+                        <td>
+                            <?php echo $poleNazovText['text']; ?>
+                        </td>
+                        <td>
+                            <a href="forum.php?uprav=<?php echo $poleNazovText['id']; ?>"> Uprav </a>
+                            <a href="proces.php?zmaz=<?php echo $poleNazovText['id']; ?>"> Zmaz </a>
+                        </td>
+                    </tr>
+                 <?php
+                    endwhile;
+                 ?>
+             </table>
+         </div>
+
+        <?php
+            function pre_r($array) {
+                echo '<pre>';
+                print_r($array);
+                echo '</pre>';
+            }
+    ?>
+
+    <div class="zadanie">
+    <form action="proces.php" method="POST">
+        <div>
+        <label>Nazov</label>
+        <input type="text" name="nazov" class="lama"
+               value="Sem zadajte meno"
+        </div>
+        <div>
+        <label>Text</label>
+        <input type="text" name="text"
+               value="Sem zadajte text"
+        </div>
+        <div>
+        <button type="submit" name="ulozit">Uloz</button>
+        </div>
+    </form>
+        </div>
 </section>
 <script>
 
